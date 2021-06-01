@@ -11,7 +11,7 @@ const TIMESTAMP_KEY = 'CHECKPOINT_TIMESTAMP';
 const DB: DynamoDB = new DynamoDB();
 
 export class DynamoDBPollingCheckpoint implements PollingCheckpoint {
-  public async getLastTweetDate(): Promise<number> {
+  public async getLastMessageDate(): Promise<number> {
     const params = {
       Key: {
         id: {
@@ -28,7 +28,7 @@ export class DynamoDBPollingCheckpoint implements PollingCheckpoint {
     }
   }
 
-  public setLastTweetDate(timestamp: number): void {
+  public setLastMessageDate(timestamp: number): void {
     const params: PutItemInput = {
       Item: {
         [CHECKPOINT_ATTRIBUTE]: {

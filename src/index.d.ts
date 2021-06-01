@@ -1,8 +1,8 @@
 export interface PollingCheckpoint {
-  getLastTweetDate(): Promise<number>;
-  setLastTweetDate(timestamp: number): void;
+  getLastMessageDate(): Promise<number>;
+  setLastMessageDate(timestamp: number): void;
 }
 
-export interface TweetProcessor {
-  process(tweets: any[]): void;
+export interface MessageProcessor {
+  process(messages: any[]): void;
 }
