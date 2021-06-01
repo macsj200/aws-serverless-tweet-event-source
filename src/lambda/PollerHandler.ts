@@ -1,6 +1,6 @@
 import { AppConfig } from '../AppConfig';
 import { DynamoDBPollingCheckpoint } from '../DynamoDBPollingCheckpoint';
-import { LambdaListingProcessor } from '../LambdaTwitterProcessor';
+import { LambdaListingProcessor } from '../LambdaMessageProcessor';
 import { Poller } from '../Poller';
 import { TwitterAPIGateway } from '../TwitterAPIGateway';
 
